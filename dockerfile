@@ -2,10 +2,9 @@ FROM python:3.12
 RUN mkdir /app
 ADD bot.py /app
 ADD requirements.txt /app
-ADD config.env /app
+ADD .env.config /app
 WORKDIR /app
 RUN touch notes.txt
-RUN if [ -f config.env ] && [ ! -f .env ]; then mv config.env .env; fi
-RUN if [ -f config.env ] && [ -f .env ]; then rm config.env; fi
+RUN mv .env.config .env
 RUN pip install -r requirements.txt
-ENTRYPOINT [ "python" ]
+ENTRYPOINT [ "python", "bot.py" ]
