@@ -1,0 +1,2 @@
+This is where logs are generated, and their filenames are in the format of:
+changelog_YYYY-MM-DD.txt
