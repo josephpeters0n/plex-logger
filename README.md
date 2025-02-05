@@ -3,7 +3,7 @@ This program uses the Python Plex API and discord.py to watch a specified Plex s
 
 ## How to Get Started
 1. Set up a Discord bot via the Discord Developer portal and invite it to your server
-2. Clone this repo and populate the config.env file with your Discord bot token, your Plex token, the URL of your Plex server, and the ID of the Discord channel you want the changelogs printed in. (This will automatically be renamed to .env when deployed via Docker)
+2. Clone this repo and populate the .env.config file with your Discord bot token, your Plex token, the URL of your Plex server, and the ID of the Discord channel you want the changelogs printed in. (This will automatically be renamed to .env when deployed via Docker)
 3. Ensure that your bot has the proper permissions in the Discord server.
 4. Build the docker image by running `docker build --tag plex-logger .`
 5. Run the docker image by running `docker run plex-logger`
